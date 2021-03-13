@@ -30,7 +30,7 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallComputerWord} You won!`;
+    result_p.innerHTML = `${convertToWord(userChoice)} ${smallUserWord} beats ${convertToWord(computerChoice)} ${smallComputerWord} You won!`;
     userChoice_div.classList.add("green-glow");
     setTimeout(function() {userChoice_div.classList.remove("green-glow")}, 400);
 }
@@ -45,7 +45,7 @@ function lose(userChoice, computerChoice) {
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallComputerWord} You lost...`;
+    result_p.innerHTML = `${convertToWord(userChoice)} ${smallUserWord} loses to ${convertToWord(computerChoice)} ${smallComputerWord} You lost...`;
     userChoice_div.classList.add("red-glow");
     setTimeout(function() {userChoice_div.classList.remove("red-glow")}, 400);
 }
@@ -56,7 +56,7 @@ function draw(userChoice, computerChoice) {
     const smallUserWord = "user".fontsize(3).sup();
     const smallComputerWord = "comp".fontsize(3).sup();
     const userChoice_div = document.getElementById(userChoice);
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals ${convertToWord(computerChoice)}${smallComputerWord} It's a draw!`;
+    result_p.innerHTML = `${convertToWord(userChoice)} ${smallUserWord} equals ${convertToWord(computerChoice)} ${smallComputerWord} It's a draw!`;
     userChoice_div.classList.add("gray-glow");
     setTimeout(function() {userChoice_div.classList.remove("gray-glow")}, 400);
 }
